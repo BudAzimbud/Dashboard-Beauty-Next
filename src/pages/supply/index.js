@@ -175,7 +175,7 @@ function index() {
           onClick={() => {
             setTab(0);
           }}
-          className={`md:px-[80px] px-[30px] pb-2 border-0 border-b-2 ${
+          className={`md:px-[80px] md:w-[20%] w-full text-center pb-2 border-0 border-b-2 ${
             tab === 0 ? "text-indigo-600 border-indigo-600" : ""
           }`}
         >
@@ -185,7 +185,7 @@ function index() {
           onClick={() => {
             setTab(1);
           }}
-          className={`md:px-[80px] px-[30px] pb-2 border-0 border-b-2 ${
+          className={`md:px-[80px] md:w-[20%] w-full text-center pb-2 border-0 border-b-2 ${
             tab === 1 ? "text-indigo-600 border-indigo-600" : ""
           }`}
         >
@@ -193,7 +193,7 @@ function index() {
         </div>
         <div
           onClick={() => setTab(2)}
-          className={`md:px-[80px] px-[30px] pb-2 border-0 border-b-2 ${
+          className={`md:px-[80px] md:w-[20%] w-full text-center pb-2 border-0 border-b-2 ${
             tab === 2 ? "text-indigo-600 border-indigo-600" : ""
           }`}
         >
