@@ -175,7 +175,7 @@ function index() {
           onClick={() => {
             setTab(0);
           }}
-          className={`md:px-[80px] px-[10.5%] pb-2 border-0 border-b-2 ${
+          className={`md:px-[80px] px-[30px] pb-2 border-0 border-b-2 ${
             tab === 0 ? "text-indigo-600 border-indigo-600" : ""
           }`}
         >
@@ -185,7 +185,7 @@ function index() {
           onClick={() => {
             setTab(1);
           }}
-          className={`md:px-[80px] px-[10.5%] pb-2 border-0 border-b-2 ${
+          className={`md:px-[80px] px-[30px] pb-2 border-0 border-b-2 ${
             tab === 1 ? "text-indigo-600 border-indigo-600" : ""
           }`}
         >
@@ -193,7 +193,7 @@ function index() {
         </div>
         <div
           onClick={() => setTab(2)}
-          className={`md:px-[80px] px-[10.5%] pb-2 border-0 border-b-2 ${
+          className={`md:px-[80px] px-[30px] pb-2 border-0 border-b-2 ${
             tab === 2 ? "text-indigo-600 border-indigo-600" : ""
           }`}
         >
@@ -211,10 +211,10 @@ function index() {
               </p>
             </div>
 
-            <div className="mt-1 flex gap-3 text-[14px]">
+            <div className="mt-1 md:flex hidden gap-3 text-[14px]">
               <button className="flex bg-indigo-400 text-white p-2 md:py-3 md:gap-1 rounded-md items-center focus:ring-2 focus:ring-white focus:ring-opacity-50">
                 <AddIcon />
-                <span className="md:block hidden">Add new customer</span>
+                Add new customer
               </button>
               <div className="flex gap-2 py-1 rounded-md items-center w-[48%] bg-white">
                 <SearchIcon className="text-gray-400 ps-1" size={28} />
@@ -229,11 +229,38 @@ function index() {
               </div>
               <button class="flex items-center gap-1 bg-white backdrop-filter p-1 px-5 rounded-md backdrop-blur-sm bg-opacity-20 text-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
                 <FilterIcon color="white" />
-                <span className="md:block hidden">Filter</span>
+                Filter
               </button>
               <button class="flex items-center gap-1 bg-white backdrop-filter p-1 px-5 rounded-md backdrop-blur-sm bg-opacity-20 text-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
                 <RefreshIcon />
-                <span className="md:block hidden">Refresh</span>
+                Refresh
+              </button>
+              <button class="bg-white backdrop-filter p-1 px-5 rounded-md backdrop-blur-sm bg-opacity-20 text-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                <PrintIcon />
+              </button>
+            </div>
+          </div>
+          <div className="md:hidden  p-3 bg-indigo-500  ">
+            <div className="flex mt-2 gap-2 py-1 rounded-md items-center w-full bg-white">
+              <SearchIcon className="text-gray-400 ps-1" size={28} />
+              <input
+                type="text"
+                className="w-full rounded-r-md focus:outline-none focus:border-none"
+                placeholder="Username"
+              />
+              <button className="p-1 bg-indigo-500 text-white rounded-md px-4 mr-2">
+                Search
+              </button>
+            </div>
+            <div className="flex mt-2 gap-4 h-[40px] justify-center ">
+            <button class="flex items-center gap-1 bg-white backdrop-filter p-1 px-5 rounded-md backdrop-blur-sm bg-opacity-20 text-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                <AddIcon/>
+              </button>
+              <button class="flex items-center gap-1 bg-white backdrop-filter p-1 px-5 rounded-md backdrop-blur-sm bg-opacity-20 text-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                <FilterIcon color="white" />
+              </button>
+              <button class="flex items-center gap-1 bg-white backdrop-filter p-1 px-5 rounded-md backdrop-blur-sm bg-opacity-20 text-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                <RefreshIcon />
               </button>
               <button class="bg-white backdrop-filter p-1 px-5 rounded-md backdrop-blur-sm bg-opacity-20 text-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
                 <PrintIcon />
