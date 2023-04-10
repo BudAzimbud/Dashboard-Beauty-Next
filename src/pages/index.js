@@ -9,11 +9,141 @@ import {
 } from "../asset/config-icons";
 import Analytic from "../asset/png/analytic.png";
 import { useRouter } from "next/router";
+import DataTable from "../components/Table";
+
 function index() {
   const [tab, setTab] = useState(0);
   const onChangeTab = (tab) => {
     setTab(tab);
   };
+
+  const setStyleLevel = (level) => {
+    if (level === "Warga") {
+      return "font-bold bg-orange-50 text-orange-600 text-center rounded p-1";
+    }
+    if (level === "Juragan") {
+      return "font-bold bg-cyan-50 text-cyan-600 text-center rounded p-1";
+    }
+    if (level === "Konglomerat") {
+      return "font-bold bg-purple-50 text-purple-600 text-center rounded p-1";
+    }
+    if(level === "Sultan"){
+      return "font-bold bg-green-50 text-green-600 text-center rounded p-1";
+
+    }
+  };
+
+  const data = [
+    {
+      id: 1,
+      customerName: "Odis Rhinehart",
+      favouriteMenu: "Chicken & Ribs Combo",
+      level: "Warga",
+      totalTransaction: "IDR 194,700",
+    },
+    {
+      id: 1,
+      customerName: "Kris Roher",
+      favouriteMenu: "Surf & Turf Gift Basket",
+      level: "Warga",
+      totalTransaction: "IDR 631,200",
+    },
+    {
+      id: 1,
+      customerName: "Serenity Fisher",
+      favouriteMenu: "Fried Chicken Dinnet",
+      level: "Juragan",
+      totalTransaction: "IDR 1,040.920",
+    },
+    {
+      id: 1,
+      customerName: "Brooklyn Warren",
+      favouriteMenu: "Surf & Turf Gift Basket",
+      level: "Sultan",
+      totalTransaction: "IDR 730,500",
+    },
+    {
+      id: 1,
+      customerName: "Franco Delort",
+      favouriteMenu: "Chicken & Ribs Combo",
+      level: "Juragan",
+      totalTransaction: "IDR 96,000",
+    },
+    {
+      id: 1,
+      customerName: "Saul Geoghegan",
+      favouriteMenu: "Surf & Turf Gift Basket",
+      level: "Juragan",
+      totalTransaction: "IDR 590,080",
+    },
+    {
+      id: 1,
+      customerName: "Alfredo Vetrovs",
+      favouriteMenu: "Dark & Stormy",
+      level: "Juragan",
+      totalTransaction: "IDR 590,080",
+    },
+    {
+      id: 1,
+      customerName: "Cristofer Vetrovs",
+      favouriteMenu: "Shaking Beef Tri-Tip",
+      level: "Konglomerat",
+      totalTransaction: "IDR 782,600",
+    },
+    {
+      id: 1,
+      customerName: "Calvin Steward",
+      favouriteMenu: "BBQ Rib Dinner",
+      level: "Konglomerat",
+      totalTransaction: "IDR 467,500",
+    },
+    {
+      id: 1,
+      customerName: "Calvin Steward",
+      favouriteMenu: "BBQ Rib Dinner",
+      level: "Konglomerat",
+      totalTransaction: "IDR 467,500",
+    },
+  ];
+
+  const columns = [
+    {
+      Header: "Customer Name",
+      accessor: "customerName",
+      Cell: ({ value }) => {
+        console.log(value);
+        return <div className="font-bold text-black/80">{value ?? "-"}</div>;
+      },
+    },
+    {
+      Header: "Level",
+      accessor: "level",
+      Cell: ({ value }) => {
+        return <div className={setStyleLevel(value)}>{value ?? "-"}</div>;
+      },
+    },
+    {
+      Header: "Favourite Menu",
+      accessor: "favouriteMenu",
+      Cell: ({ value }) => {
+        return <div className="font-bold text-black/80">{value ?? "-"}</div>;
+      },
+    },
+    {
+      Header: "Total Transaction",
+      accessor: "totalTransaction",
+      Cell: ({ value }) => {
+        return <div className="font-bold text-black/80">{value ?? "-"}</div>;
+      },
+    },
+    {
+      Header: "Action",
+      accessor: "",
+      Cell: ({ value }) => {
+        return <div className="font-bold text-black/80">{value ?? "-"}</div>;
+      },
+    },
+  ];
   return (
     <div>
       <div id="title-page">
@@ -95,6 +225,7 @@ function index() {
               </button>
             </div>
           </div>
+          <DataTable columns={columns} data={data} />
         </div>
         <div className="md:col-span-1 col-span-5">
           <div className="grid md:grid-cols-1 grid-cols-2 gap-2 ">

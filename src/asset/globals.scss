@@ -3,8 +3,6 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 
-
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -41,4 +39,32 @@ p {
   background-position: right;
   border-radius: 6px;
   height: 167px;
+}
+
+.pagination {
+  display: flex;
+  padding-left: 0;
+  gap: 0.75rem;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 5px;
+  padding: 0.375rem 0.75rem;
+
+}
+
+.page-item.active-page .page-link {
+  z-index: 3;
+  border: 1px solid #dee2e6;
+  color: black;
+  background-color: white;
+  padding: 0.375rem 0.75rem;
+  box-shadow: 1px 1px 0.1px black;
+  font-weight: 600;
 }

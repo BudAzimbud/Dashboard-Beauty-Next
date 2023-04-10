@@ -10,6 +10,7 @@ import { AiOutlinePlus, AiFillPrinter } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
 import { FiRefreshCw, FiPrinter } from "react-icons/fi";
 import { TfiFilter } from "react-icons/tfi";
+import { TiArrowUnsorted } from "react-icons/ti";
 
 //export icon
 export { RxDashboard as HomeIcon };
@@ -26,3 +27,4 @@ export { CiSearch as SearchIcon };
 export { TfiFilter as FilterIcon };
 export { FiRefreshCw as RefreshIcon };
 export { FiPrinter as PrintIcon };
+export { TiArrowUnsorted as SortedIcon };
