@@ -272,8 +272,8 @@ function index() {
           <DataTable columns={columns} data={data} />
         </div>
         <div className="md:col-span-1 col-span-5">
-          <div className="grid md:grid-cols-1 grid-cols-2 gap-2 ">
-            <Image src={Analytic} alt="analytic" />
+          <div className="flex  flex-col gap-2 ">
+            <Image src={Analytic}  alt="analytic" />
             <div
               className="h-[530px] p-4 overflow-y-auto  rounded-md bg-no-repeat bg-auto bg-bottom"
               style={{
