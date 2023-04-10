@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
   return (
     <div className="flex min-h-screen">
       <aside
-        className={`fixed bg-white overflow-x-auto border border-2 top-0 left-0   z-40  w-64 h-full transition-transform -translate-x-full ${
+        className={`fixed h-screen bg-white overflow-x-auto border border-2 top-0 left-0   z-40  w-64  transition-transform -translate-x-full ${
           isSidebarOpen ? "translate-x-0" : "sm:translate-x-0"
         } `}
       >
