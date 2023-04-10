@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
       </aside>
       <main className="sm:ml-64 w-full">
         <div className="p-6 ">
-          <div className="sm:hidden flex justify-end">
+          <div className="sm:hidden fixed end-5">
             <button
               onClick={handleSidebarToggle}
               className="text-indigo-800 rounded-full rounded-md focus:outline-none"
