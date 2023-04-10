@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
         } `}
       >
         <MenuList />
-        <div className="md:mt-0 mt-20 px-4 pb-3 border border-b-0  content-center ">
+        <div className="md:mt-0  px-4 pb-3 border border-b-0  content-center ">
           <div className="flex mt-4 gap-2 items-center w-full">
             <Image src={UserImage} alt="user-image" className="w-[36px]" />
             <div>
