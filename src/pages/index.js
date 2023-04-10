@@ -14,6 +14,7 @@ import Analytic from "../asset/png/analytic.png";
 import DataTable from "../components/Table";
 
 function index() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [tab, setTab] = useState(0);
   const onChangeTab = (tab) => {
     setTab(tab);
