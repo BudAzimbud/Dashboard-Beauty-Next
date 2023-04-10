@@ -108,11 +108,11 @@ function DataTable({
           <span className="text-gray-400">Showing 10 Data Customers</span>
           <ReactPaginate
             breakLabel="..."
-            nextLabel=">"
+            nextLabel=" Next"
             onPageChange={changePageHandler}
             pageRangeDisplayed={3}
             pageCount={totalPage}
-            previousLabel="<"
+            previousLabel=""
             renderOnZeroPageCount={null}
             className="pagination"
             pageClassName="page-item"

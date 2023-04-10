@@ -11,7 +11,9 @@ import { CiSearch } from "react-icons/ci";
 import { FiRefreshCw, FiPrinter } from "react-icons/fi";
 import { TfiFilter } from "react-icons/tfi";
 import { TiArrowUnsorted } from "react-icons/ti";
-
+import { MdDeleteOutline } from "react-icons/md";
+import { BiEditAlt } from "react-icons/bi";
+import { RiFileShield2Line } from "react-icons/ri";
 //export icon
 export { RxDashboard as HomeIcon };
 export { CgShutterstock as StockIcon };
@@ -28,3 +30,6 @@ export { TfiFilter as FilterIcon };
 export { FiRefreshCw as RefreshIcon };
 export { FiPrinter as PrintIcon };
 export { TiArrowUnsorted as SortedIcon };
+export { MdDeleteOutline as DeleteIcon };
+export { BiEditAlt as EditIcon };
+export { RiFileShield2Line as EditShieldIcon };

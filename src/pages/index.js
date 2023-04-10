@@ -2,6 +2,9 @@ import Image from "next/image";
 import React, { useState } from "react";
 import {
   AddIcon,
+  DeleteIcon,
+  EditIcon,
+  EditShieldIcon,
   FilterIcon,
   PrintIcon,
   RefreshIcon,
@@ -27,9 +30,8 @@ function index() {
     if (level === "Konglomerat") {
       return "font-bold bg-purple-50 text-purple-600 text-center rounded p-1";
     }
-    if(level === "Sultan"){
+    if (level === "Sultan") {
       return "font-bold bg-green-50 text-green-600 text-center rounded p-1";
-
     }
   };
 
@@ -140,7 +142,20 @@ function index() {
       Header: "Action",
       accessor: "",
       Cell: ({ value }) => {
-        return <div className="font-bold text-black/80">{value ?? "-"}</div>;
+        return (
+          <div className="flex gap-4">
+            <button className="bg-gray-50 flex gap-2 items-center rounded-md px-3 py-2">
+              <EditShieldIcon size={15} />
+              Detail
+            </button>
+            <button className="bg-gray-50 rounded-md px-3 py-2">
+              <EditIcon />
+            </button>
+            <button className="bg-red-50 text-red-400 rounded-md px-3 py-2">
+              <DeleteIcon />
+            </button>
+          </div>
+        );
       },
     },
   ];
