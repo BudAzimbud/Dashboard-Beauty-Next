@@ -45,7 +45,7 @@ function MenuList() {
     );
   };
   return (
-    <nav className="text-gray-400 mt-10 py-2.5 px-8  overflow-y-scroll">
+    <nav className="text-gray-400 mt-10 py-2.5 px-8 h-[80%]  overflow-y-scroll">
       <Image src={Logo} alt="logo" />
       {submenu({
         menus: [
