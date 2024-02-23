@@ -11,9 +11,9 @@ import {
   SearchIcon,
 } from "../../asset/config-icons";
 import Analytic from "../../asset/png/analytic.png";
-
 import { useRouter } from "next/router";
 import DataTable from "../../components/Table";
+import Layout from "../../components/Layout";
 
 function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -162,7 +162,8 @@ function index() {
     },
   ];
   return (
-    <div>
+    <Layout>
+<div>
       <div id="title-page">
         <h1 className="font-bold text-[24px]">Customer</h1>
         <p className="text-gray-400 text-[14px]">
@@ -320,6 +321,8 @@ function index() {
         </div>
       </div>
     </div>
+    </Layout>
+    
   );
 }
 

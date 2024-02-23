@@ -1,10 +1,9 @@
-import { Layout } from '@/components';
-import '@/asset/globals.scss'
-
+import "@/asset/globals.scss";
+import { ThemeProvider } from "@material-tailwind/react";
 export default function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-        <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider>
+      <Component {...pageProps} />
+    </ThemeProvider>
   );
 }

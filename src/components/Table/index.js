@@ -105,7 +105,7 @@ function DataTable({
 
         {/* pagination */}
         <div className="p-2 items-center rounded-md flex  w-full bg-gray-50 justify-between">
-          <span className="text-gray-400">Showing 10 Data Customers</span>
+          <span className="text-gray-400">Showing 10 Data</span>
           <ReactPaginate
             breakLabel="..."
             nextLabel=" Next"

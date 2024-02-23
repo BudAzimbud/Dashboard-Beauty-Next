@@ -14,7 +14,7 @@ import Analytic from "../../asset/png/analytic.png";
 
 import { useRouter } from "next/router";
 import DataTable from "../../components/Table";
-
+import Layout from "../../components/Layout";
 function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [tab, setTab] = useState(0);
@@ -112,7 +112,7 @@ function index() {
 
   const columns = [
     {
-      Header: "Customer Name",
+      Header: "Email",
       accessor: "customerName",
       Cell: ({ value }) => {
         console.log(value);
@@ -120,21 +120,21 @@ function index() {
       },
     },
     {
-      Header: "Level",
+      Header: "Role",
       accessor: "level",
       Cell: ({ value }) => {
         return <div className={setStyleLevel(value)}>{value ?? "-"}</div>;
       },
     },
     {
-      Header: "Favourite Menu",
+      Header: "Verified Email",
       accessor: "favouriteMenu",
       Cell: ({ value }) => {
         return <div className="font-bold text-black/80">{value ?? "-"}</div>;
       },
     },
     {
-      Header: "Total Transaction",
+      Header: "Last Login",
       accessor: "totalTransaction",
       Cell: ({ value }) => {
         return <div className="font-bold text-black/80">{value ?? "-"}</div>;
@@ -162,11 +162,12 @@ function index() {
     },
   ];
   return (
-    <div>
+    <Layout>
+  <div>
       <div id="title-page">
-        <h1 className="font-bold text-[24px]">Customer</h1>
+        <h1 className="font-bold text-[24px]">Settings</h1>
         <p className="text-gray-400 text-[14px]">
-          You can manage and organize your customer and other things here
+          You can manage and organize your setting application and other things here
         </p>
       </div>
       <div
@@ -181,7 +182,7 @@ function index() {
             tab === 0 ? "text-indigo-600 border-indigo-600" : ""
           }`}
         >
-          Customer
+          User
         </div>
         <div
           onClick={() => {
@@ -191,7 +192,7 @@ function index() {
             tab === 1 ? "text-indigo-600 border-indigo-600" : ""
           }`}
         >
-          Promo
+          Role
         </div>
         <div
           onClick={() => setTab(2)}
@@ -199,7 +200,7 @@ function index() {
             tab === 2 ? "text-indigo-600 border-indigo-600" : ""
           }`}
         >
-          Voucher
+          Permission
         </div>
       </div>
       <div class="grid grid-cols-5 mt-3 gap-4">
@@ -216,14 +217,14 @@ function index() {
             <div className="mt-1 md:flex hidden gap-3 text-[14px]">
               <button className="flex bg-indigo-400 text-white p-2 md:py-3 md:gap-1 rounded-md items-center focus:ring-2 focus:ring-white focus:ring-opacity-50">
                 <AddIcon />
-                Add new customer
+                Add User
               </button>
               <div className="flex gap-2 py-1 rounded-md items-center w-[48%] bg-white">
                 <SearchIcon className="text-gray-400 ps-1" size={28} />
                 <input
                   type="text"
                   className="w-full rounded-r-md focus:outline-none focus:border-none"
-                  placeholder="Username"
+                  placeholder="Search..."
                 />
                 <button className="p-1 bg-indigo-500 text-white rounded-md px-4 mr-2">
                   Search
@@ -320,6 +321,8 @@ function index() {
         </div>
       </div>
     </div>
+    </Layout>
+  
   );
 }
 
