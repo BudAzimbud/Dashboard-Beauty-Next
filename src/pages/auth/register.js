@@ -12,7 +12,7 @@ import { FaRegEyeSlash } from "react-icons/fa";
 
 function Login() {
   return (
-    <div className="flex h-[100vh] justify-between  ">
+    <div className="flex justify-between  ">
      <div
         className="w-[100%] lg:block hidden "
         style={{
@@ -31,15 +31,15 @@ function Login() {
         
         </div>
       </div>
-      <div className="lg:p-20 h-[100vh]  lg:bg-gradient-to-l from-primary to-white w-full lg:w-[60%] flex justify-center  items-center">
+      <div className="lg:p-20 h-[100vh]  w-full lg:w-[60%] flex justify-center  items-center">
         <Card className="p-4 lg:bg-white w-full lg:shadow-lg">
         <Typography variant="h4" color="indigo">
             Sign Up
           </Typography>
-          <Typography color="gray" className="mt-1 font-normal">
+          <Typography color="gray" className="mt-1 font-normal text-gray-500">
             Lets join with us!
           </Typography>
-          <form className="mt-2  max-w-screen-lg ">
+          <form className="mt-2  ">
             <div className=" flex flex-col gap-6">
               <Typography variant="h6" color="blue-gray" className="-mb-5">
                 Your Name
@@ -52,7 +52,7 @@ function Login() {
                 Your Email
               </Typography>
               <Input
-                placeholder="Email"
+                placeholder="Phone"
                 className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               />
               <Typography variant="h6" color="blue-gray" className="-mb-5">
@@ -70,12 +70,10 @@ function Login() {
               <Input
                 type="password"
                 icon={<FaRegEyeSlash />}
-                size="lg"
                 placeholder="********"
                 className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               />
             </div>
-
             <Button
                className="mt-6 bg-primary"
               fullWidth

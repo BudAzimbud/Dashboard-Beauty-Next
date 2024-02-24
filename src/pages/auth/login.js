@@ -11,8 +11,16 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import Logo from "@/asset/png/logo.jpeg";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 function Login() {
+  const router = useRouter()
+
+  const login = (e) => {
+    e.preventDefault()
+    console.log('test')
+    router.push('/')
+  }
   return (
     <div className="flex justify-between ">
       <div
@@ -34,16 +42,16 @@ function Login() {
         </div>
       </div>
       
-      <div className="lg:p-20 h-[100vh]  lg:bg-gradient-to-l from-primary to-white w-full lg:w-[60%] flex justify-center  items-center">
+      <div className="lg:p-20 h-[100vh]  w-full lg:w-[60%] flex justify-center  items-center">
         <Card className="p-4 lg:bg-white w-full lg:shadow-lg shadow-none">
           
           <Typography variant="h4" color="indigo">
             Sign In
           </Typography>
-          <Typography color="gray" className="mt-1 font-normal">
+          <Typography color="gray" className="mt-1 font-normal text-gray-500">
             Nice to meet you! Access Your World with Ease
           </Typography>
-          <form className="mt-2  max-w-screen-lg ">
+          <form onSubmit={login} className="mt-2  max-w-screen-lg ">
             <div className=" flex flex-col gap-6">
               <Typography variant="h6" color="blue-gray" className="-mb-5">
                 Your Email
@@ -72,7 +80,7 @@ function Login() {
             <Typography
               variant="small"
               color="gray"
-              className="flex items-center font-normal"
+              className="flex items-center text-gray-500"
             >
               Forget your Password?
               <a
@@ -86,6 +94,7 @@ function Login() {
             <Button
               className="mt-6 bg-primary"
               fullWidth
+              type="submit"
             >
               sign in
             </Button>

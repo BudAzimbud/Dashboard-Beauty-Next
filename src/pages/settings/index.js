@@ -115,7 +115,6 @@ function index() {
       Header: "Email",
       accessor: "customerName",
       Cell: ({ value }) => {
-        console.log(value);
         return <div className="font-bold text-black/80">{value ?? "-"}</div>;
       },
     },

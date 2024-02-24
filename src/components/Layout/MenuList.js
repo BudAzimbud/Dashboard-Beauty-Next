@@ -21,14 +21,14 @@ function MenuList() {
 
   const pagesActive = (currentPathname) => {
     if (currentPathname === pathname) {
-      return ` w-full mt-7 flex justify-between items-center gap-3 text-[14px] leading-[150%] font-bold block rounded-md text-indigo-700 `;
+      return ` w-full mt-5 flex justify-between items-center gap-3 text-[14px] leading-[150%] font-bold block rounded-md text-indigo-700 `;
     }
-    return `mt-7 flex justify-between items-center gap-3 text-[14px] leading-[150%] font-bold block rounded-md hover:text-indigo-700`;
+    return `mt-5 flex justify-between items-center gap-3 text-[14px] leading-[150%] font-bold block rounded-md hover:text-indigo-700`;
   };
 
   const submenu = ({ menus, name }) => {
     return (
-      <div className="mt-7">
+      <div className="mt-4">
         <span className="text-[10px]">{name}</span>
         {menus.map((menu) => (
           <Link key={menu.route} href={menu.route}>

@@ -3,11 +3,18 @@ import MenuList from "./MenuList";
 import Image from "next/image";
 import UserImage from "../../asset/svg/UserImage.svg";
 import { HumbergerIcon } from "@/asset/config-icons";
+import { useRouter } from "next/router";
 const Layout = ({ children }) => {
+  const router = useRouter()
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
   const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+  
+  const onLogout = (e)=>{
+    e.preventDefault()
+    router.push('/auth/login')
+  }
 
   return (
     <div className="flex min-h-screen">
@@ -21,11 +28,11 @@ const Layout = ({ children }) => {
           <div className="flex mt-4 gap-2 items-center w-full">
             <Image src={UserImage} alt="user-image" className="w-[36px]" />
             <div>
-              <span className="font-medium text-[14px]">Savanah N</span>
-              <p className="text-[10px] text-gray-400">Food Quality Manager</p>
+              <span className="font-medium text-[14px]">Azim</span>
+              <p className="text-[10px] text-gray-400">Administrator</p>
             </div>
           </div>
-          <button className="bg-red-100 w-full mt-4 p-2 text-[12px] rounded-md text-red-700">
+          <button onClick={onLogout} className="bg-red-100 w-full mt-4 p-2 text-[12px] rounded-md text-red-700">
             Logout
           </button>
         </div>
